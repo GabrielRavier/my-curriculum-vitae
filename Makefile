@@ -1,13 +1,12 @@
 .PHONY: all
 
-OUTPUT_NAME = CV.pdf
-SOURCE_NAME = CV
+OUTPUTS = CV.pdf CV-fr.pdf
 
-all: $(OUTPUT_NAME)
+all: $(OUTPUTS)
 
-$(OUTPUT_NAME): $(SOURCE_NAME).odt
+%.pdf: %.odt
 	libreoffice --headless --convert-to pdf $^
 # 	mv $(SOURCE_NAME).pdf $(OUTPUT_NAME).pdf
 
 clean:
-	rm $(OUTPUT_NAME)
+	rm $(OUTPUTS)
