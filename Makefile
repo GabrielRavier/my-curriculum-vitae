@@ -1,6 +1,6 @@
 .PHONY: all
 
-OUTPUTS = CV.pdf CV-fr.pdf
+OUTPUTS = CV.pdf CV-fr.pdf CV-short-fr.pdf
 
 all: $(OUTPUTS)
 
